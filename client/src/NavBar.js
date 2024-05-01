@@ -13,6 +13,8 @@ function NavBar() {
   const groceryOptions = categories.Grocery;
   const clothingOptions = categories.Clothing;
   const techOptions = categories.Technology;
+  const jewleryOptions = categories.Jewlery;
+  const furnitureOptions = categories.Furniture;
   const [companyOptions, setCompanyOptions] = useState([]);
 
   const addProductButton = authState.isAuthenticated && authState.type === 'company' ? (
@@ -125,6 +127,8 @@ const welcomeMessage = authState.isAuthenticated ? (
           <Dropdown label="Grocery" options={groceryOptions} />
           <Dropdown label="Clothing" options={clothingOptions} />
           <Dropdown label="Technology" options={techOptions} />
+          <Dropdown label="Jewlery" options={jewleryOptions} />
+          <Dropdown label="Furniture" options={furnitureOptions} />
           <Dropdown label="Companies" options={companyOptions} />
           <button onClick={() => navigate('/products')}> Product Listing</button>
         </div>
