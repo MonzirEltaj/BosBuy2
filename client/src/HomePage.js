@@ -44,7 +44,7 @@ function HomePage() {
                 <img src={product.imageUrl} alt={product.name} className="product-image" />
                 <div className="product-info">
                   <h3>{product.name}</h3>
-                  <p>Description: {product.description}</p>
+                  <p>{product.description}</p>
                   <p>Price: ${product.price}</p>
                   <p>Sold by: {product.soldBy}</p>
                   <button onClick={() => addToCart(product)}>Add to Cart</button>
