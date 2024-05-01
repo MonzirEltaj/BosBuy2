@@ -1,0 +1,83 @@
+/* Login.css */
+
+
+.login {
+    max-width: 400px;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+
+  }
+  
+  .login h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Poppins;
+    font-style: bold;
+    font-size: 30px;
+    color: #333;
+  }
+  
+  .login form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-family: Poppins;
+    font-style: oblique;
+  }
+  
+  .login select,
+  .login input[type="text"],
+  .login input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .login button {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: times;
+    font-style: bold;
+  }
+  .login .in-text{
+    color:white;
+  }
+  
+  .login .signup-button {
+    background-color: #3f2860;;
+    color: #ff69b4;
+    font-family: times;
+    font-style: bold;
+  }
+  .login .me-text{
+    color: white;
+  }
+  .login .signup-text{
+    color: white;
+  }
+  .login .button-common {
+    background-color: #3f2860;
+    color: #ff69b4;
+    font-family: times;
+  }
+  
+  .login button:hover {
+    opacity: 0.8;
+  }
+  

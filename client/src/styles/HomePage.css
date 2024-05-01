@@ -1,0 +1,21 @@
+#HomePage .product-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+}
+
+#HomePage .product-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px; /* Space between image and text content */
+}
+
+#HomePage .product-info {
+    flex-grow: 1; /* Take up remaining space */
+    text-align: left; /* Align text to the left */
+}

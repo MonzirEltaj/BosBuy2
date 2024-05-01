@@ -1,0 +1,97 @@
+/* Signup.css */
+
+.signup {
+    max-width: 400px;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .signup h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Poppins;
+    font-style: bold;
+    font-size: 30px;
+    color: #333;
+  }
+  
+  .signup form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-family: Poppins;
+    font-style: oblique;
+  }
+  
+  .signup select,
+  .signup input[type="text"],
+  .signup input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    
+  }
+  
+  .signup button {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Times New Roman;
+    font-style: bold;
+  }
+  .signup .showhide{
+    background-color: #3f2860; 
+    color: #ff69b4
+  }
+  .signup .signup-button {
+    background-color: #3f2860; 
+    color: #ff69b4;
+  }
+
+  .signup .up-text{
+    color: white;
+  }
+  
+  .signup .home-button {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: #3f2860; 
+    color: #ff69b4;
+    
+  }
+  .signup .me-text{
+    color: white;
+  }
+  
+  .signup .login-button {
+    background-color: #3f2860;
+    display: flex;
+    flex-wrap: wrap;
+    color: #ff69b4;
+  }
+  .signup .login-text{
+    color: white;
+  }
+  
+
+  .signup button:hover {
+    opacity: 0.8;
+  }
+  

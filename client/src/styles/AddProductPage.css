@@ -1,0 +1,64 @@
+#addProductPage .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+#addProductPage .label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#addProductPage .input, #addProductPage .textarea, #addProductPage button {
+  width: 100%; /* Maintain a consistent width for all input elements */
+  margin-top: 5px;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+}
+
+#addProductPage .textarea {
+  display: block;
+  text-align: left;
+  resize: none;
+  height: 150px;
+  overflow-y: auto;
+  margin: 10px auto; /* Ensures textarea is centered and respects margins */
+}
+
+#addProductPage .image-dropzone-container, #addProductPage .dropzone {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto; /* Center these elements without affecting form width */
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+#addProductPage .uploaded-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#addProductPage .remove-image-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
