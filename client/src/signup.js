@@ -11,7 +11,7 @@ function Signup() {
         lastName: '',
         userId: '',
         password: '',
-        name: '',  // For company name
+        name: '',  
     });
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
@@ -25,20 +25,19 @@ function Signup() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const url = 'http://localhost:9000/createAccount'; // Adjusted endpoint
+        const url = 'http://localhost:9000/createAccount'; 
         let data = {
             accountType,
             ...signupValues
         };
 
-        // Remove fields that are not necessary for the respective account type
         if (accountType === 'user') {
             delete data.name;
         } else {
             delete data.firstName;
             delete data.lastName;
             delete data.userId;
-            data.name = signupValues.name; // Using the company name field for companies
+            data.name = signupValues.name; 
         }
 
         axios.post(url, data)

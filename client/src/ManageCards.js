@@ -25,8 +25,9 @@ function ManageCards() {
         try {
             const response = await axios.delete(`http://localhost:9000/deleteCard/${cardId}`);
             if (response.data.success) {
-                fetchCards(); // Refresh cards after deletion
+                fetchCards(); 
                 alert('Card deleted successfully!');
+                navigate(`/editProfile`);
             }
         } catch (error) {
             console.error('Failed to delete card:', error);
@@ -35,7 +36,6 @@ function ManageCards() {
     };
 
     const navigateToEditCard = (cardId) => {
-        // Navigate to a route where you can edit card details
         navigate(`/editCard/${cardId}`);
     };
 

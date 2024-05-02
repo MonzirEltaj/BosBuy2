@@ -3,14 +3,13 @@ import { useNavigate } from 'react-router-dom';
 
 function Dropdown({ label, options }) {
   const [showOptions, setShowOptions] = useState(false);
-  const navigate = useNavigate();  // Use navigation
+  const navigate = useNavigate();  
 
   const handleOptionClick = (option) => {
-    // Check if the option is the category itself or a sub-category
     if (option === label) {
-      navigate(`/${label}`);  // Navigate to main category page
+      navigate(`/${label}`);  
     } else {
-      navigate(`/${label}/${option}`);  // Navigate to sub-category
+      navigate(`/${label}/${option}`);  
     }
   };
 

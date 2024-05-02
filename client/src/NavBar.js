@@ -4,7 +4,7 @@ import { useAuth } from './UserContext';
 import { categories } from './categories';
 import axios from 'axios';  
 import Dropdown from './Dropdown';  
-import './styles/NavBar.css';
+
 
 function NavBar() {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ function NavBar() {
 
   const handleSignoutAndNavigate = () => {
     handleSignout();  
-    navigate('/');    // Navigates to the homepage
+    navigate('/');    
   };
 
   useEffect(() => {
@@ -46,17 +46,17 @@ const welcomeMessage = authState.isAuthenticated ? (
  
   const spinningStyle = {
     animation: 'spin3d 10s linear infinite',
-    fontSize: '36px', // Increased icon size
+    fontSize: '36px', 
     cursor: 'pointer',
-    color: 'white', // Adjust color to fit your navbar theme
+    color: 'white', 
     padding: '10px',
     userSelect: 'none', 
     transition: 'color 0.3s' 
   };
   const bosbuyStyle = {
     textAlign: 'center',
-    fontFamily: 'Poppins', // Example font family
-    fontSize: 'px', // Example font size
+    fontFamily: 'Poppins', 
+    fontSize: 'px', 
     color: 'black',
     backgroundColor: '#3f2860',
      
@@ -70,13 +70,13 @@ const welcomeMessage = authState.isAuthenticated ? (
 
   return (
     <div>
-      {/* "BOSBUY" text */}
+      {}
       <div style={bosbuyStyle}>
       <span style={pinkBOSstyle}>Bos</span>
         <span style={whiteBUYstyle}>Buy</span>
       </div>
 
-      {/* Navigation bar */}
+      {}
       <nav style={{
         display: 'flex',
         flexDirection: 'column',
@@ -137,7 +137,6 @@ const welcomeMessage = authState.isAuthenticated ? (
   );
 }
 
-// Adding keyframes for 3D spinning animation via global style
 document.head.appendChild(document.createElement("style")).textContent = `
   @keyframes spin3d {
     from { transform: rotate3d(0, 1, 0, 0deg); }

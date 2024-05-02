@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from './UserContext'; // Make sure this path is correct
+import { useAuth } from './UserContext'; 
 
 const OrderHistory = () => {
     const navigate = useNavigate();

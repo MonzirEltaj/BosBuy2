@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useCart } from './CartContext';
-import './styles/ProductStyles.css';  // Ensure the CSS path is correct
+import './styles/ProductStyles.css'; 
 
 const ProductSort = () => {
     const [products, setProducts] = useState([]);

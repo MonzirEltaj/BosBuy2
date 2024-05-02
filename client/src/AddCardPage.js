@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from './UserContext'; // Assuming useAuth provides user details
+import { useAuth } from './UserContext'; 
 
 function AddCardPage() {
     const navigate = useNavigate();
@@ -24,17 +24,17 @@ function AddCardPage() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(cardDetails); // Log the card details to ensure they are all populated
+        console.log(cardDetails); 
         if (!cardDetails.cardNumber || !cardDetails.cardName || !cardDetails.expirationDate || !cardDetails.cvv || !cardDetails.zipCode) {
             alert('Please fill in all fields');
-            return; // Prevent submission if any field is empty
+            return; 
         }
         try {
             const response = await axios.post('http://localhost:9000/addCard', {
-                userId: authState.user._id, // Make sure this is populated
-                cardDetails // Ensure this is structured correctly
+                userId: authState.user._id, 
+                cardDetails 
             });
-            if (response.status === 201) { // Ensure this matches the expected success status code
+            if (response.status === 201) { 
                 alert('Card added successfully!');
                 navigate('/editProfile');
             } else {

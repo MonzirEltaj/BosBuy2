@@ -11,7 +11,7 @@ function ChangePassword() {
         newPassword: '',
         confirmPassword: '',
     });
-    const [showPasswords, setShowPasswords] = useState(false); // Controls the visibility of passwords
+    const [showPasswords, setShowPasswords] = useState(false); 
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -47,8 +47,8 @@ function ChangePassword() {
     };
 
     const togglePasswordVisibility = (event) => {
-        event.preventDefault(); // Prevent the form from submitting when clicking the button
-        setShowPasswords(!showPasswords); // Toggle the visibility state
+        event.preventDefault(); 
+        setShowPasswords(!showPasswords); 
     };
 
     return (

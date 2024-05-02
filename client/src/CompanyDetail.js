@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useCart } from './CartContext';
-import './styles/ProductStyles.css';  // Ensure the CSS path is correct
+import './styles/ProductStyles.css';  
 
 const CompanyDetail = () => {
     const { companyName } = useParams();
     const [products, setProducts] = useState([]);
-    const { addToCart } = useCart(); // Assuming user context is managed within useCart or similar context
+    const { addToCart } = useCart(); 
 
     useEffect(() => {
         axios.get(`http://localhost:9000/getCompanyProducts/${companyName}`)

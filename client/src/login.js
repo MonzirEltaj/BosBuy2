@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './styles/Login.css';
-import { useAuth } from './UserContext';  // Updated import to useAuth
+import { useAuth } from './UserContext';  
 
 function Login() {
     const navigate = useNavigate();
-    const { handleLoginSuccess } = useAuth();  // Using handleLoginSuccess from UserContext
+    const { handleLoginSuccess } = useAuth();  
     const [loginValues, setLoginValues] = useState({
-        accountType: 'user',  // Default to 'user'
+        accountType: 'user',  
         userId: '',
-        name: '',  // For company name
+        name: '',  
         password: '',
     });
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -29,18 +29,18 @@ function Login() {
             accountType: loginValues.accountType,
             ...loginValues
         };
-        // Remove name or userId based on the account type
+       
         if (params.accountType === 'user') {
             delete params.name;
         } else {
             delete params.userId;
-            params.userId = params.name;  // Use the name field for company name in the query
+            params.userId = params.name;  
         }
 
         axios.get('http://localhost:9000/getAccount', { params })
         .then((res) => {
             if (res.data) {
-                handleLoginSuccess(res.data, loginValues.accountType);  // Pass data and accountType to context
+                handleLoginSuccess(res.data, loginValues.accountType);  
                 navigate('/');
             } else {
                 alert('No user found with these credentials');

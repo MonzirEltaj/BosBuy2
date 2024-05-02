@@ -8,7 +8,7 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const clearCart = () => {
-    setCartItems([]); // Clears the entire cart
+    setCartItems([]); 
   };
 
   const addToCart = (item) => {

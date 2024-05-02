@@ -1,15 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useCart } from './CartContext'; // Make sure this path is correct
+import { useCart } from './CartContext'; 
 
 const Cart = () => {
   const navigate = useNavigate();
   const { cartItems, removeFromCart, decreaseQuantity, addToCart, clearCart } = useCart();
 
-  // Calculate total price for each item
   const getItemTotal = (item) => item.price * item.quantity;
 
-  // Calculate the total price for all items
   const getTotalSum = () => {
     return cartItems.reduce((acc, item) => acc + getItemTotal(item), 0);
   };
@@ -31,7 +29,7 @@ const Cart = () => {
           </li>
         ))}
       </ul>
-      <h2>Total: ${getTotalSum().toFixed(2)}</h2> {/* Display the total sum */}
+      <h2>Total: ${getTotalSum().toFixed(2)}</h2> {}
       {cartItems.length === 0 ? <p>Your cart is empty</p> : 
         <button onClick={() => navigate('/checkout')} style={{ margin: '10px' }}>Checkout</button>
       }

@@ -1,7 +1,7 @@
 .product-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* This will ensure that items are spaced evenly */
+    justify-content: space-around; 
 }
 
 .product-card {
@@ -10,7 +10,7 @@
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
-    width: calc(33.333% - 20px); /* Adjusted for margin */
+    width: calc(33.333% - 20px); 
     box-sizing: border-box;
     transition: box-shadow 0.3s;
 }
@@ -34,18 +34,18 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     padding: 10px 20px;
-    margin-bottom: 20px; /* Space below the category header */
+    margin-bottom: 20px; 
 }
 
 .category-header:hover {
-    background-color: #f0f0f0; /* Light grey background on hover */
+    background-color: #f0f0f0; 
 }
 
 .loading-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;  /* Full viewport height */
+    height: 100vh;  
     font-size: 24px;
     font-weight: bold;
 }

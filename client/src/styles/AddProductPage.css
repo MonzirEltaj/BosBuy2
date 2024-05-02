@@ -12,7 +12,7 @@
 }
 
 #addProductPage .input, #addProductPage .textarea, #addProductPage button {
-  width: 100%; /* Maintain a consistent width for all input elements */
+  width: 100%; 
   margin-top: 5px;
   padding: 10px;
   text-align: center;
@@ -26,14 +26,13 @@
   resize: none;
   height: 150px;
   overflow-y: auto;
-  margin: 10px auto; /* Ensures textarea is centered and respects margins */
+  margin: 10px;
 }
 
-#addProductPage .image-dropzone-container, #addProductPage .dropzone {
+#addProductPage .image-dropzone-container{
   width: 150px;
   height: 150px;
-  margin: 10px auto; /* Center these elements without affecting form width */
-  border: 2px dashed #ccc;
+  margin: 10px auto; 
   display: flex;
   align-items: center;
   justify-content: center;

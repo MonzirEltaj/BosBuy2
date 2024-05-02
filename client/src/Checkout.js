@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useCart } from './CartContext'; // Ensure this path is correct
-import { useAuth } from './UserContext'; // If user context holds authentication and user info
+import { useCart } from './CartContext'; 
+import { useAuth } from './UserContext'; 
 
 const Checkout = () => {
     const navigate = useNavigate();

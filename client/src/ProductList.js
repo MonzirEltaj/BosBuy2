@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useCart } from './CartContext';
-import './styles/ProductStyles.css';  // Ensure the CSS path is correct
-
+import './styles/ProductStyles.css';  
 function ProductList() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);

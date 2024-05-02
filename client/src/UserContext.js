@@ -4,7 +4,7 @@ const UserContext = createContext();
 
 export const useAuth = () => useContext(UserContext);
 
-export const UserProvider = ({ children }) => { // Add a prop to handle navigation on sign out
+export const UserProvider = ({ children }) => { 
   const [authState, setAuthState] = useState({
     isAuthenticated: false,
     user: null,
@@ -24,7 +24,7 @@ export const UserProvider = ({ children }) => { // Add a prop to handle navigati
   }, []);
 
   const handleLoginSuccess = (userData, type) => {
-    console.log(`User logged in as: ${type}`);  // Log the user type to the console
+    console.log(`User logged in as: ${type}`);  
     setAuthState({
         isAuthenticated: true,
         user: userData,
@@ -48,8 +48,8 @@ export const UserProvider = ({ children }) => { // Add a prop to handle navigati
     setAuthState(prevState => ({
         ...prevState,
         user: {
-            ...prevState.user, // spread existing user details
-            ...userData // overwrite with new details from the response
+            ...prevState.user, 
+            ...userData 
         }
     }));
 };

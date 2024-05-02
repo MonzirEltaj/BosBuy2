@@ -20,50 +20,53 @@ import OrderHistory from './OrderHistory';
 import ReceiptDetails from './ReceiptDetails';
 import CompanyList from './CompanyList';
 import CompanyDetail from './CompanyDetail';
+import EditProduct from './EditProduct'; 
+import ProductDetail from './ProductDetail'; 
 
 function Layout() {
-  const location = useLocation();
-  const noNavBarRoutes = ['/login', '/signup'];
+const location = useLocation();
+const noNavBarRoutes = ['/login', '/signup'];
 
-  return (
-    <div>
-      {!noNavBarRoutes.includes(location.pathname) && <NavBar />}
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/homePage" element={<HomePage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/:category" element={<ProductSort />} />
-        <Route path="/:category/:subcategory" element={<ProductSort />} />
-        <Route path="/editProfile" element={<EditProfile/>} />
-        <Route path="/changePassword" element={<ChangePassword/>} />
-        <Route path="/cart" element={<Cart/>} />
-        <Route path="/addProduct" element={<AddProductPage/>} />
-        <Route path="/products" component={ProductList} element={<ProductList/>} />
-        <Route path="/addCardPage" element={<AddCardPage/>} />
-        <Route path="/manageCards" element={<ManageCards/>} />
-        <Route path="/editCard/:cardId" element={<EditCard/>} />
-        <Route path="/checkout" element={<Checkout/>} />
-        <Route path="/orderHistory" element={<OrderHistory />} />
-       <Route path="/receipt/:receiptId" element={<ReceiptDetails />} />
-       <Route path="/companies" element={<CompanyList />} />
-        <Route path="/companies/:companyName" element={<CompanyDetail />} />
-        
-      </Routes>
-    </div>
-  );
+return (
+<div>
+{!noNavBarRoutes.includes(location.pathname) && <NavBar />}
+<Routes>
+<Route path="/" element={<HomePage />} />
+<Route path="/homePage" element={<HomePage />} />
+<Route path="/login" element={<Login />} />
+<Route path="/signup" element={<Signup />} />
+<Route path="/:category" element={<ProductSort />} />
+<Route path="/:category/:subcategory" element={<ProductSort />} />
+<Route path="/editProfile" element={<EditProfile/>} />
+<Route path="/changePassword" element={<ChangePassword/>} />
+<Route path="/cart" element={<Cart/>} />
+<Route path="/addProduct" element={<AddProductPage/>} />
+<Route path="/products" element={<ProductList/>} />
+<Route path="/addCardPage" element={<AddCardPage/>} />
+<Route path="/manageCards" element={<ManageCards/>} />
+<Route path="/editCard/:cardId" element={<EditCard/>} />
+<Route path="/checkout" element={<Checkout/>} />
+<Route path="/orderHistory" element={<OrderHistory />} />
+<Route path="/receipt/:receiptId" element={<ReceiptDetails />} />
+<Route path="/companies" element={<CompanyList />} />
+<Route path="/companies/:companyName" element={<CompanyDetail />} />
+<Route path="/editProduct" element={<EditProduct />} />
+<Route path="/editProduct/:productId" element={<ProductDetail />} />
+</Routes>
+</div>
+);
 }
 
 function App() {
-  return (
-    <Router>
-      <UserProvider>
-        <CartProvider>
-          <Layout />
-        </CartProvider>
-      </UserProvider>
-    </Router>
-  );
+return (
+<Router>
+<UserProvider>
+<CartProvider>
+<Layout />
+</CartProvider>
+</UserProvider>
+</Router>
+);
 }
 
 export default App;

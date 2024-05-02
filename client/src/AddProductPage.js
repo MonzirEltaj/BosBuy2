@@ -54,7 +54,7 @@ function AddProductPage() {
     e.preventDefault();
     try {
       await axios.post('http://localhost:9000/addProduct', product);
-      navigate('/'); // Navigate to the homepage or confirmation page after successful post
+      navigate('/'); 
     } catch (error) {
       console.error('Failed to add product:', error);
     }
@@ -101,7 +101,7 @@ function AddProductPage() {
                 {({ getRootProps, getInputProps }) => (
                   <div className="dropzone" {...getRootProps()}>
                     <input {...getInputProps()} />
-                    <p>Drag 'n' drop JPEG or PNG images here, or click to select files</p>
+                    <p>Click to insert an image here</p>
                   </div>
                 )}
               </Dropzone>
