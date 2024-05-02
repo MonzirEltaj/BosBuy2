@@ -6,7 +6,7 @@ const ReceiptSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    receiptCount: {  // Ensure this field is correctly defined
+    receiptCount: {  
         type: Number,
         required: true
     },
